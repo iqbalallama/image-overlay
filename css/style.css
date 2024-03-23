@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main{
+    width: 30%;
+    height: 450px;
+    position: relative;
+    /* image ta boro korle ta overlay theke boro hoye jai tai oita jate baire na chole jai tar jonno overflow hidden deya hoise */
+    overflow: hidden;
+}
+/* hover korle visibility on hobe */
+.main:hover .text{
+    visibility: visible;
+}
+/* image ta j vitor theke boro hosse ta koto boro hobe size saita hover kore bole deya hosse tai hover korle boro hobe */
+.main:hover img{
+    transform: scale(1.1);
+}
+.img{
+    width: 100%;
+    height: 450px;
+    
+}
+.img img{
+    width: 100%;
+    height: 450px;
+    /* image ta j boro hosse tar transition effect koto second e hobe ta main tain; */
+    transition: 2s ease;
+}
+.text{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: brown;
+    opacity: 0.7;
+    color: white;
+    visibility: hidden;
+}
